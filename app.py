@@ -20,7 +20,7 @@ app.config.update(mail_settings)
 
 mail= Mail(app)
 
-class Contcato:
+class contacto:
     def __init__(self, nome, email, mensagem):
         self.nome= nome
         self.email= email
@@ -33,7 +33,7 @@ def index():
 @app.route('/send', methods=['GET', 'POST'])
 def send ():
     if request.method == 'POST':
-        formContato= Contcato(
+        formContato= contacto(
             request.form["nome"],
             request.form["email"],
             request.form["mensagem"]
